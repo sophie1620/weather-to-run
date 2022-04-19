@@ -1,0 +1,56 @@
+h1 {
+    font-size: 3.7rem;
+    font-family: $h1Font;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: $serifFont;
+    color: white;
+    text-shadow: 1px 1px #b6a64c;
+
+    span {
+        font-size: 1.7rem;
+    }
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-family: $serifFont;
+}
+
+h4 {
+    font-size: 1rem;
+    font-family: $sansSerifFont;
+    color: $accent;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+
+li,
+p,
+input {
+    font-size: 1rem;
+    font-family: $sansSerifFont;
+    line-height: 1.4;
+    color: $secondaryBackground;
+}
+
+li {
+    color: white;
+}
+
+label {
+    color: black;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    font-family: $serifFont;
+}
+
+button {
+    font-family: $sansSerifFont;
+    color: $secondaryBackground;
+    font-weight: 600;
+}

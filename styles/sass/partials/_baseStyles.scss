@@ -1,0 +1,41 @@
+body {
+    background-color: $backgroundColour;
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: $secondaryBackground;
+
+    &:hover,
+    &:focus {
+        color: $hoverColor;
+    }
+}
+
+button {
+    padding: 15px 20px;
+    border: none;
+    background-color: $accent;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    padding: 0;
+
+    li {
+        list-style: square;
+        line-height: 1.2;
+    }
+}

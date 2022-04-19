@@ -1,0 +1,15 @@
+footer {
+    background-color: $secondaryBackground;
+    padding: 10px;
+
+    p {
+        text-align: center;
+        margin: 0;
+        color: $lightgrey;
+
+        a {
+            color: #fffbe3;
+            font-weight: 600;
+        }
+    }
+}

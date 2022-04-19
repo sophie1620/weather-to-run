@@ -1,0 +1,194 @@
+.response {
+    min-height: 35vh;
+    position: relative;
+}
+
+// class to add to the sections when called
+.sectionsBackground {
+    background-color: $secondaryBackground;
+    border-radius: 40px;
+    margin-bottom: 45px;
+    border: 20px solid #82e8ff;
+    box-shadow: 5px 5px 8px $secondaryBackground;
+}
+
+
+/////// FORM /////////
+form {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        input {
+            width: 235px;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        button {
+            width: 235px;
+            border: 5px solid $accent;
+            box-shadow: 5px 5px 8px $secondaryBackground;
+
+            &:hover,
+            &:focus {
+                border: 5px solid $hoverColor;
+                transition: 1s;
+            }
+
+            &:active {
+                box-shadow: none;
+                transition: 1s;
+            }
+        }
+    }
+}
+
+
+/////// WHAT TO WEAR ///////////
+.whatToWear {
+    max-width: 470px;
+
+    .clothingFlexContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 50%;
+            max-width: 170px;
+            padding-top: 15px;
+        }
+
+        h2 {
+            padding-left: 25px;
+        }
+    }
+
+    ul {
+        padding: 15px;
+        margin: 0 auto;
+
+        h3 {
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 15px;
+        }
+
+        li {
+            width: 120px;
+            margin: 0 auto;
+        }
+
+    }
+
+    .treadmillRec {
+        margin: 15px;
+        color: $accent;
+        font-size: 0.8rem;
+    }
+}
+
+.column {
+    column-count: 2;
+    column-gap: 1;
+}
+
+////// WEATHER RESULTS SECTION //////
+
+/* 'not the right city?' section */
+.location {
+    margin: 45px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+
+    h3 {
+        margin: 8px 0 0 0;
+        padding: 0 10px;
+        color: $accent;
+        text-align: center;
+    }
+}
+
+// class to add to the location section 
+.locationBackground {
+    background-color: $secondaryBackground;
+    max-width: 450px;
+}
+
+.errorHandling {
+    margin: 5px;
+    color: transparent;
+    font-size: 0.1rem;
+    transition: all 1200ms ease-out;
+
+    span {
+        display: block;
+    }
+
+}
+
+//transition to hide error handling p after on page for 5s
+.visuallyShow {
+    color: white;
+    font-size: 1rem;
+}
+
+//class to remove when showing the error handling p upon search
+.displayNone {
+    display: none;
+}
+
+.currentConditions {
+    max-width: 470px;
+
+    .flexContainer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+    }
+}
+
+.iconContainer {
+    width: 55%;
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.forecastHighlights {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+
+    h2 {
+        margin: 10px 0;
+
+        span {
+            display: block;
+            margin: 5px 0;
+        }
+    }
+
+    h4 {
+        margin: 0;
+    }
+}
+
+.additionalInfo {
+    padding: 15px 0 15px 5%;
+}

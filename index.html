@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quando&family=Red+Hat+Display:wght@300;600&display=swap"
+        rel="stylesheet">
+    
+    <!-- link to styles.css -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Weather To Run or Not</title>
+</head>
+<body>
+    <header>
+    <div class="greycurve">
+        <h1>Weather to Run <span>( or Not )</span></h1>
+        <div class="headerImgContainer">
+            <img src="./assets/headerFootprints.png" alt="" aria-hidden="true">
+        </div>
+    
+    </div>
+    </header>
+    
+    <main>
+        <section class="whereToRun wrapper">
+            <form action="">
+                <label for="location">Where are you running?</label>
+                <div>
+                    <input id="location" type="text" placeholder="Toronto, ON">
+                    <button type="submit">Check Your Forecast!</button>
+                </div>
+            </form>
+        </section>
+        <section class="response">
+    
+            <!-- div for loading and have something -->
+            <div id="displayLoading" class="displayLoading">
+                <!-- div for loading animation -->
+                <div id="loadingAnimation" class="loadingAnimation">
+                    <div class="innerLoading"></div>
+                </div>
+            </div> <!-- end of displayLoading -->
+    
+            <div class="location wrapper">
+                <h3></h3>
+                <p class="errorHandling displayNone">Not the right city? Try specifying your <span>state/province or country
+                        as well</span></p>
+            </div> <!-- end of location -->
+    
+            <div class="results">
+    
+                <div class="currentConditions wrapper">
+                    <div class="flexContainer wrapper">
+                        <div class="iconContainer">
+                            <!-- icon goes here -->
+                        </div>
+                        <div class="forecastHighlights">
+                            <!-- feelsLike goes here -->
+                        </div>
+                    </div> <!-- flex container ends -->
+    
+                    <ul class="additionalInfo wrapper">
+                        <!-- more weather info goes here -->
+                    </ul>
+    
+                </div> <!-- end of currentConditions -->
+    
+                <div class="whatToWear wrapper">
+                    <div class="clothingFlexContainer wrapper">
+                        <!-- title and footprints here -->
+                    </div>
+                    <ul class="clothingItems wrapper">
+                        <!-- clothing array goes here -->
+                    </ul>
+                    <p class="treadmillRec"></p>
+                </div> <!-- end of whatToWear -->
+            </div> <!-- end of results -->
+        </section> <!-- end of response section -->
+    </main>
+    
+    <footer>
+        <p>Created and Designed by Emily Read & Sophie Lai</p>
+        <p><a href="https://junocollege.com/" target="blank">@ Juno College</a></p>
+        <p>API courtesy of <a href="https://www.visualcrossing.com/weather-api" target="blank">Visual Crossing</a></p>
+    </footer>
+
+    <!-- link to script.js -->
+    <script src="./script.js"></script>
+</body>
+</html>
