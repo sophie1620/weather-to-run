@@ -11,8 +11,10 @@
 //Append Array result from if/else statement to page 
 
 
+const weatherApp = {}
+
 // clothing options for different temperature blocks inside our the runningAttire array
-const runningAttire = [
+weatherApp.runningAttire = [
     {
         title: 'extreme cold',
         clothing: [
@@ -87,7 +89,7 @@ const runningAttire = [
 ] //end of runningAttire array
 
 //create array for different weather icons to use
-const weatherIcons = [
+weatherApp.weatherIcons = [
     "./assets/cloudy.svg",
     "./assets/moon.svg",
     "./assets/moonandcloud.svg",
@@ -97,8 +99,6 @@ const weatherIcons = [
     "./assets/sunny.svg",
     "./assets/windy.svg"
 ]
-
-const weatherApp = {}
 
 //define some variables for event listener + fetch call
 weatherApp.apiURL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/`
@@ -111,14 +111,14 @@ weatherApp.userInput = document.querySelector('input');
 /////// INIT FUNCTION /////////
 //Create init function to set off event listener
 weatherApp.init = function () {
-    eventListener();
+    this.eventListener();
 }
 
 
 ///////// EVENT LISTENER ///////////
 //Create function to store event listener inside (to be called in init)
 //Create event listener to retrieve value of user input 
-const eventListener = function () {
+weatherApp.eventListener = function () {
     weatherApp.form.addEventListener('submit', function (e) {
         e.preventDefault();
         weatherApp.userLocation = weatherApp.userInput.value;
@@ -245,25 +245,25 @@ weatherApp.displayIcon = function (icon) {
     masterpiece.alt = "";
     //if/else statements to know which image to append
     if (icon === "cloudy") {
-        masterpiece.src = weatherIcons[0]
+        masterpiece.src = this.weatherIcons[0]
         iconContainer.appendChild(masterpiece);
     } else if (icon === "clear-night") {
-        masterpiece.src = weatherIcons[1]
+        masterpiece.src = this.weatherIcons[1]
         iconContainer.appendChild(masterpiece);
     } else if (icon === "partly-cloudy-night") {
-        masterpiece.src = weatherIcons[2]
+        masterpiece.src = this.weatherIcons[2]
         iconContainer.appendChild(masterpiece);
     } else if (icon === "rain") {
-        masterpiece.src = weatherIcons[3]
+        masterpiece.src = this.weatherIcons[3]
         iconContainer.appendChild(masterpiece);
     } else if (icon === "snow") {
-        masterpiece.src = weatherIcons[4]
+        masterpiece.src = this.weatherIcons[4]
         iconContainer.appendChild(masterpiece);
     } else if (icon === "partly-cloudy-day") {
-        masterpiece.src = weatherIcons[5]
+        masterpiece.src = this.weatherIcons[5]
         iconContainer.appendChild(masterpiece);
     } else if (icon === "clear-day") {
-        masterpiece.src = weatherIcons[6]
+        masterpiece.src = this.weatherIcons[6]
         iconContainer.appendChild(masterpiece);
     } else {
         masterpiece.src = weatherIcons[7]
@@ -309,26 +309,26 @@ weatherApp.displayClothing = function (temperature) {
     // console.log('display clothing');
     if (temperature < -10) {
         // console.log(`WAH! COLD! BRR!`);
-        weatherApp.selectClothingList(runningAttire[0].clothing);
+        weatherApp.selectClothingList(this.runningAttire[0].clothing);
 
     } else if (temperature >= -10 && temperature < 0) {
         // console.log(`its alright..kinda cold`);
-        weatherApp.selectClothingList(runningAttire[1].clothing);
+        weatherApp.selectClothingList(this.runningAttire[1].clothing);
 
     } else if (temperature >= 0 && temperature < 5) {
         // console.log(`i'm temperate`);
-        weatherApp.selectClothingList(runningAttire[2].clothing);
+        weatherApp.selectClothingList(this.runningAttire[2].clothing);
 
     } else if (temperature >= 5 && temperature < 15) {
         // console.log(`it's warm out!`);
-        weatherApp.selectClothingList(runningAttire[3].clothing);
+        weatherApp.selectClothingList(this.runningAttire[3].clothing);
 
     } else if (temperature >= 15 && temperature < 25) {
         // console.log(`it's getting hot in here!`);
-        weatherApp.selectClothingList(runningAttire[4].clothing);
+        weatherApp.selectClothingList(this.runningAttire[4].clothing);
     } else {
         // console.log(`is it wise run outside?`);
-        weatherApp.selectClothingList(runningAttire[5].clothing);
+        weatherApp.selectClothingList(this.runningAttire[5].clothing);
     }
 } // end of displayClothing function
 
